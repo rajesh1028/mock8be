@@ -5,7 +5,7 @@ const orderRouter = express.Router();
 
 orderRouter.get("/orders", async (req, res) => {
     try {
-        let order = await OrderModel.findOne();
+        let order = await OrderModel.find();
         res.status(200).json(order);
     } catch (error) {
         res.json(error);
